@@ -87,7 +87,7 @@ function Navbar() {
               <Typography fontSize="1.9rem" lineHeight={1}>🍄</Typography>
               <Box>
                 <Typography sx={{ fontFamily: '"Playfair Display",serif', color: 'white', fontSize: '1.2rem', lineHeight: 1.1 }}>
-                  Tarmusah
+                Tarmushi
                 </Typography>
                 <Typography sx={{ color: '#7fb347', fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
                   Mushrooms
@@ -141,7 +141,7 @@ function Navbar() {
 }
 
 // ============================================================
-// HERO  url('https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=1600') center/cover no-repeat
+// HERO
 // ============================================================
 function Hero() {
   return (
@@ -149,10 +149,8 @@ function Hero() {
       minHeight: '100vh',
       display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
       textAlign: 'center', pt: '7rem', pb: '4rem', px: 3, position: 'relative',
-      // ADD HERO IMAGE: replace the unsplash URL with url('/images/hero-farm.jpg')
       background: `
         linear-gradient(to bottom right, rgba(10,30,10,0.84), rgba(26,46,26,0.66)),
-  
         url('/tarmusaPics/mushroomMetaAI.jpeg')    center/cover no-repeat
       `,
     }}>
@@ -161,7 +159,7 @@ function Hero() {
         background:'radial-gradient(ellipse at 60% 40%, rgba(127,179,71,0.09) 0%, transparent 60%)' }} />
 
       <FadeIn delay={100} sx={{ position: 'relative', zIndex: 2, maxWidth: 780 }}>
-        <Chip label="🌿 Grown in Gayaza, Wakiso" sx={{
+        <Chip label="🌿 Grown in Lukwanga, Wakiso" sx={{
           mb: 3, background: 'rgba(127,179,71,0.18)',
           border: '1px solid rgba(127,179,71,0.4)', color: '#7fb347', fontWeight: 500,
         }} />
@@ -170,7 +168,7 @@ function Hero() {
           fontSize: { xs: '3.5rem', sm: '5.5rem', md: '7rem' },
           color: 'white', lineHeight: 1, letterSpacing: '-0.02em', mb: 0.5,
         }}>
-          Tarmusah
+          Tarmushi
         </Typography>
         <Typography variant="h2" sx={{
           fontStyle: 'italic', fontWeight: 400, color: '#7fb347', mb: 2.5,
@@ -182,8 +180,7 @@ function Hero() {
           color: 'rgba(255,255,255,0.78)', maxWidth: 560, mx: 'auto', mb: 4, lineHeight: 1.85,
           fontSize: { xs: '0.95rem', md: '1.1rem' },
         }}>
-          Uganda's premium mushroom farm — growing, training, and supplying fresh Oyster &amp; 
-          s from the heart of Gayaza.
+          Uganda's premium mushroom farm — growing, training, and supplying fresh Oyster &amp; Button mushrooms from the heart of Lukwanga.
         </Typography>
 
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="center">
@@ -229,28 +226,17 @@ function About() {
           {/* Image */}
           <Grid item xs={12} md={5}>
             <Box sx={{ position:'relative' }}>
-              {/*// ADD FARM IMAGE: replace Paper with */}
               <Box component="img" src="/tarmusaPics/ButtonMush.jpeg" sx={{
-               width:'100%', aspectRatio:'4/5', 
-               objectFit:'cover', borderRadius:4 
-               }} /> 
+               width:'100%', aspectRatio:'4/5',
+               objectFit:'cover', borderRadius:4
+               }} />
 
-              {/* <Paper elevation={0} sx={{
-                aspectRatio:'4/5', borderRadius:4,
-                background:'linear-gradient(135deg,#ede4d0,#f5f0e8)',
-                display:'flex', alignItems:'center', justifyContent:'center',
-                border:'2px dashed #d4a96a',
-              }}> 
-                <Typography sx={{ color:'#8b6242', fontSize:'0.9rem', textAlign:'center', px:2 }}>
-                  📸 Add Farm Photo Here
-                </Typography>
-              </Paper>  */}
               <Paper elevation={8} sx={{
                 position:'absolute', bottom:-24, right:-24,
                 background:'#1a2e1a', color:'white', p:2, borderRadius:3, minWidth:150,
-              }}> 
+              }}>
                 <Typography variant="h6" sx={{ fontFamily:'"Playfair Display",serif', fontSize:'1.05rem' }}>
-                  Est. Gayaza
+                  Est. Lukwanga
                 </Typography>
                 <Typography sx={{ fontSize:'0.75rem', opacity:0.65 }}>Wakiso District, Uganda</Typography>
               </Paper>
@@ -265,7 +251,7 @@ function About() {
               <Box component="em" sx={{ color:'#4a7c4a', fontStyle:'italic' }}>Mushroom Farming</Box>
             </Typography>
             <Typography sx={{ color:'#6b7c6b', mb:2, lineHeight:1.8 }}>
-              Tarmusah Mushrooms is a leading farm based in Gayaza, Wakiso. We specialize in cultivating premium{' '}
+              Tarmushi Mushrooms is a leading farm based in Lukwanga, Wakiso. We specialize in cultivating premium{' '}
               <strong>Oyster mushrooms</strong> and <strong>Button mushrooms</strong> using sustainable, high-quality practices.
             </Typography>
             <Typography sx={{ color:'#6b7c6b', mb:4, lineHeight:1.8 }}>
@@ -311,6 +297,7 @@ const VARIETIES = [
     imgSrc: '/tarmusaPics/ButtonMush.jpeg',
   },
 ];
+
 function Varieties() {
   return (
     <Box component="section" sx={{ py:{ xs:8, md:12 }, background:'#f5f0e8' }}>
@@ -324,25 +311,33 @@ function Varieties() {
         <Grid container spacing={3}>
           {VARIETIES.map((v, i) => (
             <Grid item xs={12} md={6} key={i}>
-              <Card sx={{ overflow:'hidden', height:'100%' }}>
-                {/* ADD IMAGE: replace Paper with <Box component="img" src={v.imgSrc} sx={{ width:'100%', height:220, objectFit:'cover' }} /> */}
-                <Paper elevation={0} sx={{
-                  height:220, background:v.bg,
-                  display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:1,
-                  borderBottom:'2px dashed rgba(139,98,66,0.2)',
-                }}>
-                  <Typography fontSize="2.5rem">{v.icon}</Typography>
-                  <Typography sx={{ fontSize:'0.75rem', color:'#8b6242' }}>📸 Add {v.name} Photo</Typography>
-                </Paper>
-                <CardContent sx={{ p:3 }}>
-                  <Typography variant="h4" sx={{ color:'#1a2e1a', mb:0.5 }}>{v.name}</Typography>
-                  <Typography sx={{ color:'#7fb347', fontSize:'0.85rem', fontStyle:'italic', mb:1.5 }}>{v.sci}</Typography>
-                  <Typography sx={{ color:'#6b7c6b', mb:2, fontSize:'0.95rem' }}>{v.desc}</Typography>
+              <Card sx={{ overflow: 'hidden', height: '100%' }}>
+                {v.imgSrc ? (
+                  <Box
+                    component="img"
+                    src={v.imgSrc}
+                    alt={v.name}
+                    sx={{ width: '100%', height: 220, objectFit: 'cover' }}
+                  />
+                ) : (
+                  <Paper elevation={0} sx={{
+                    height: 220, background: v.bg,
+                    display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 1,
+                    borderBottom: '2px dashed rgba(139,98,66,0.2)',
+                  }}>
+                    <Typography fontSize="2.5rem">{v.icon}</Typography>
+                    <Typography sx={{ fontSize: '0.75rem', color: '#8b6242' }}>📸 Add {v.name} Photo</Typography>
+                  </Paper>
+                )}
+                <CardContent sx={{ p: 3 }}>
+                  <Typography variant="h4" sx={{ color: '#1a2e1a', mb: 0.5 }}>{v.name}</Typography>
+                  <Typography sx={{ color: '#7fb347', fontSize: '0.85rem', fontStyle: 'italic', mb: 1.5 }}>{v.sci}</Typography>
+                  <Typography sx={{ color: '#6b7c6b', mb: 2, fontSize: '0.95rem' }}>{v.desc}</Typography>
                   <Stack spacing={0.75}>
                     {v.features.map(f => (
-                      <Box key={f} sx={{ display:'flex', alignItems:'center', gap:1 }}>
-                        <CheckCircleOutlineIcon sx={{ color:'#4a7c4a', fontSize:'1rem' }} />
-                        <Typography sx={{ fontSize:'0.9rem', color:'#4a7c4a', fontWeight:500 }}>{f}</Typography>
+                      <Box key={f} sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                        <CheckCircleOutlineIcon sx={{ color: '#4a7c4a', fontSize: '1rem' }} />
+                        <Typography sx={{ fontSize: '0.9rem', color: '#4a7c4a', fontWeight: 500 }}>{f}</Typography>
                       </Box>
                     ))}
                   </Stack>
@@ -359,15 +354,6 @@ function Varieties() {
 // ============================================================
 // PRODUCTS
 // ============================================================
-//const PRODUCTS = [
- // { icon:'🍄', name:'Oyster Mushrooms',       tag:'Fresh Produce',  imgSrc:null, desc:'Fresh, tender oyster mushrooms harvested daily. Rich in nutrients and perfect for any cuisine.' },
- // { icon:'⚪', name:'Button Mushrooms',        tag:'Fresh Produce',  imgSrc:null, desc:'Plump, creamy 
- // s — ideal for soups, salads, stir-fries, and everyday cooking.' },
- // { icon:'🌱', name:'Mushroom Spawns',         tag:'Farm Inputs',    imgSrc:null, desc:'High-quality spawns for Oyster and Button varieties. Perfect for starting your own mushroom farm.' },
- // { icon:'🪴', name:'Ready Mushroom Gardens',  tag:'Starter Kits',   imgSrc:null, desc:'Pre-prepared growing kits ready for fruiting. Add water and start harvesting within days!' },
-//  { icon:'🧵', name:'Cotton Husks (Substrate)',tag:'Growing Medium', imgSrc:null, desc:'Premium cotton husks — the ideal substrate for cultivating healthy, productive mushroom blocks.' },
-//];
-
 const PRODUCTS = [
   {
     icon: '🍄',
@@ -406,7 +392,6 @@ const PRODUCTS = [
   },
 ];
 
-
 function Products() {
   return (
     <Box id="products" component="section" sx={{ py:{ xs:8, md:12 }, background:'white' }}>
@@ -425,28 +410,16 @@ function Products() {
             <Grid item xs={12} sm={6} md={4} key={i}>
               <Card sx={{ height:'100%', display:'flex', flexDirection:'column', background:'#f5f0e8' }}>
                 <Box sx={{ position:'relative' }}>
-                  {/* ADD IMAGE: replace Paper with <Box component="img" src={p.imgSrc} sx={{ width:'100%', height:190, objectFit:'cover' }} /> 
-                  <Paper elevation={0} sx={{
-                    height:190, background:'linear-gradient(135deg,#ede4d0,#e8dcc8)',
-                    display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:0.75,
-                    borderBottom:'2px dashed rgba(139,98,66,0.18)',
-                  }}>
-                    <Typography fontSize="2.5rem">{p.icon}</Typography>
-                    <Typography sx={{ fontSize:'0.7rem', color:'#8b6242' }}>📸 Add Photo</Typography>
-                  </Paper>
-
-                  */}
-
                   <Box
-  component="img"
-  src={p.imgSrc}
-  alt={p.name}
-  sx={{
-    width: '100%',
-    height: 190,
-    objectFit: 'cover',
-  }}
-/>
+                    component="img"
+                    src={p.imgSrc}
+                    alt={p.name}
+                    sx={{
+                      width: '100%',
+                      height: 190,
+                      objectFit: 'cover',
+                    }}
+                  />
                   <Chip label={p.tag} size="small" sx={{
                     position:'absolute', top:12, left:12,
                     background:'#1a2e1a', color:'#7fb347', fontWeight:600, fontSize:'0.7rem',
@@ -530,7 +503,7 @@ function Services() {
 // TEAM
 // ============================================================
 const TEAM = [
-  { name:'Musa Mugerwa',    role:'Director',          initials:'MM', imgSrc:null, bio:'Founder and visionary behind Tarmusah Mushrooms. Leads strategic direction and community outreach.' },
+  { name:'Musa Mugerwa',    role:'Director',          initials:'MM', imgSrc:'/dist/tarmusaPics/managingDirector.jpeg', bio:'Founder and visionary behind Tarmushi Mushrooms. Leads strategic direction and community outreach.' },
   { name:'Managing Director', role:'Managing Director', initials:'MD', imgSrc:null, bio:'Oversees daily operations, quality control, and farm management — ensuring the highest standards.' },
   { name:'Secretary',       role:'Secretary',          initials:'SC', imgSrc:null, bio:'Handles administration, client communications, and coordinates training programs and consultations.' },
 ];
@@ -545,7 +518,7 @@ function Team() {
             Meet Our Team
           </Typography>
           <Typography sx={{ color:'#6b7c6b', maxWidth:500, mx:'auto' }}>
-            The dedicated individuals growing Tarmusah Mushrooms forward.
+            The dedicated individuals growing Tarmushi Mushrooms forward.
           </Typography>
         </Box>
         <Grid container spacing={3} justifyContent="center">
@@ -556,7 +529,6 @@ function Team() {
                   {m.imgSrc
                     ? <Box component="img" src={m.imgSrc} alt={m.name}
                         sx={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'top' }} />
-                    // ADD TEAM PHOTO: set m.imgSrc = '/images/team/name.jpg' in the TEAM array above
                     : (
                       <Box sx={{
                         width:'100%', height:'100%', minHeight:200,
@@ -592,9 +564,9 @@ function Team() {
 // CONTACT
 // ============================================================
 const CONTACT_ITEMS = [
-  { Icon:LocationOnIcon, label:'Location',       value:'Gayaza, Wakiso District, Uganda',  href:null },
-  { Icon:PhoneIcon,      label:'Phone / WhatsApp',value:'+256 703 937 373',                href:'tel:+256703937373' },
-  { Icon:EmailIcon,      label:'Email',           value:'tarmusamushrooms@gmail.com',       href:'mailto:tarmusamushrooms@gmail.com' },
+  { Icon:LocationOnIcon, label:'Location',       value:'Lukwanga, Wakiso District, Uganda',  href:null },
+  { Icon:PhoneIcon,      label:'Phone / WhatsApp',value:'+256 706 740 761',                href:'tel:+256 788 740 761' },
+  { Icon:EmailIcon,      label:'Email',           value:'tarmushimushrooms@gmail.com',       href:'mailto:tarmushimushrooms@gmail.com' },
   { Icon:AccessTimeIcon, label:'Working Hours',   value:'Mon – Sat: 8:00 AM – 6:00 PM',    href:null },
 ];
 
@@ -654,7 +626,7 @@ function Contact() {
             }}>
               <Typography sx={{ color:'rgba(255,255,255,0.45)', fontSize:'0.85rem', lineHeight:2 }}>
                 📍 Add Google Maps Embed Here<br />
-                <Box component="small" sx={{ fontSize:'0.75rem' }}>Gayaza, Wakiso, Uganda</Box>
+                <Box component="small" sx={{ fontSize:'0.75rem' }}>Lukwanga, Wakiso, Uganda</Box>
               </Typography>
             </Paper>
           </Grid>
@@ -703,12 +675,12 @@ function Footer() {
             <Box sx={{ display:'flex', alignItems:'center', gap:1, mb:2 }}>
               <Typography fontSize="2rem">🍄</Typography>
               <Box>
-                <Typography sx={{ fontFamily:'"Playfair Display",serif', color:'white', fontSize:'1.15rem', lineHeight:1.1 }}>Tarmusah</Typography>
+                <Typography sx={{ fontFamily:'"Playfair Display",serif', color:'white', fontSize:'1.15rem', lineHeight:1.1 }}>Tarmushi</Typography>
                 <Typography sx={{ color:'#7fb347', fontSize:'0.65rem', letterSpacing:'0.1em', textTransform:'uppercase' }}>Mushrooms</Typography>
               </Box>
             </Box>
             <Typography sx={{ color:'rgba(255,255,255,0.45)', fontSize:'0.9rem', maxWidth:280, lineHeight:1.8 }}>
-              Cultivating excellence from Gayaza, Wakiso — Uganda's trusted mushroom farm.
+              Cultivating excellence from Lukwanga, Wakiso — Uganda's trusted mushroom farm.
             </Typography>
           </Grid>
 
@@ -733,9 +705,9 @@ function Footer() {
             </Typography>
             <Stack spacing={1.25}>
               {[
-                { icon:'📍', text:'Gayaza, Wakiso, Uganda',          href:null },
-                { icon:'📞', text:'+256 703 937 373',                href:'tel:+256703937373' },
-                { icon:'✉️', text:'tarmusamushrooms@gmail.com',       href:'mailto:tarmusamushrooms@gmail.com' },
+                { icon:'📍', text:'Lukwanga, Wakiso, Uganda',          href:null },
+                { icon:'📞', text:'+256 706 740 761',                href:'tel:+256788740761' },
+                { icon:'✉️', text:'tarmushimushrooms@gmail.com',       href:'mailto:tarmushirooms@gmail.com' },
               ].map(item => (
                 <Box key={item.text} sx={{ display:'flex', gap:1, alignItems:'center' }}>
                   <Typography fontSize="0.9rem">{item.icon}</Typography>
@@ -752,7 +724,7 @@ function Footer() {
 
         <Divider sx={{ borderColor:'rgba(255,255,255,0.08)', mb:3 }} />
         <Typography sx={{ color:'rgba(255,255,255,0.28)', fontSize:'0.85rem', textAlign:'center' }}>
-          © {new Date().getFullYear()} Tarmusah Mushrooms. All rights reserved.
+          © {new Date().getFullYear()} Tarmushi Mushrooms. All rights reserved.
         </Typography>
       </Container>
     </Box>
