@@ -503,7 +503,7 @@ function Services() {
 // TEAM
 // ============================================================
 const TEAM = [
-  { name:'Musa Mugerwa',    role:'Director',          initials:'MM', imgSrc:'/dist/tarmusaPics/managingDirector.jpeg', bio:'Founder and visionary behind Tarmushi Mushrooms. Leads strategic direction and community outreach.' },
+  { name:'Musa Mugerwa',    role:'Director',          initials:'MM', imgSrc:'/tarmusaPics/managingDirector.jpeg', bio:'Founder and visionary behind Tarmushi Mushrooms. Leads strategic direction and community outreach.' },
   { name:'Managing Director', role:'Managing Director', initials:'MD', imgSrc:null, bio:'Oversees daily operations, quality control, and farm management — ensuring the highest standards.' },
   { name:'Secretary',       role:'Secretary',          initials:'SC', imgSrc:null, bio:'Handles administration, client communications, and coordinates training programs and consultations.' },
 ];
